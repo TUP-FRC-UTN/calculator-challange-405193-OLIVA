@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
+  @Input() valor1: number = 0;
+  @Input() valor2: number = 0;
+  @Output() resultado = new EventEmitter<number>();
 
+  
 }
